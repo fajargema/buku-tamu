@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel 7 PDF Example</title>
+    <title>Data Buku Tamu</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="container">
-        <button id="btn-export" class="btn btn-primary" onclick="exportHTML();">Export to
-            word doc</button>
+        <button id="btn-export" class="btn btn-primary" onclick="exportHTML();">Download</button>
     </div>
     <div class="container mt-5" id="source-html">
         <h2 class="text-center mb-3"><center>Report Buku Tamu</center></h2>
@@ -21,10 +20,11 @@
             <thead style="background-color: #000; color:#fff">
                 <tr>
                     <th>#</th>
-                    <th>Date</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Necessity</th>
+                    <th>Tanggal</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Keperluan</th>
+                    <th>Keterangan</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,6 +35,7 @@
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->address }}</td>
                     <td>{{ $item->necessity }}</td>
+                    <td>{{ $item->description }}</td>
                 </tr>
                 @endforeach
             </tbody>

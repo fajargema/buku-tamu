@@ -45,7 +45,7 @@
                                 <th class="py-3 px-6 text-left"></th>
                                 <th class="py-3 px-6 text-left">Nama</th>
                                 <th class="py-3 px-6 text-left">Aktivitas</th>
-                                <th class="py-3 px-6 text-left">Tanggal</th>
+                                <th class="py-3 px-6 text-left">Waktu</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-600 text-sm font-light">
@@ -73,11 +73,11 @@
                     </table>
 
                     Halaman : {{ $query->currentPage() }} <br/>
-	Jumlah Data : {{ $query->total() }} <br/>
-	Data Per Halaman : {{ $query->perPage() }} <br/>
+                    Jumlah Data : {{ $query->total() }} <br/>
+                    Data Per Halaman : {{ $query->perPage() }} <br/>
 
 
-	{{ $query->links() }}
+                    {{ $query->links() }}
                 </div>
             </div>
         </div>

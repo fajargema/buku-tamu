@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 use PDF;
 use Alert;
+use Carbon\Carbon;
 use PhpOffice\PhpWord\TemplateProcessor;
 
 class GuestController extends Controller
@@ -31,7 +32,7 @@ class GuestController extends Controller
                             <i class="bx bxs-pencil"></i> Edit
                         </a>
                         <form class="inline-block" action="' . route('dashboard.guest.destroy', $item->id) . '" method="POST">
-                            <button type="submit" onclick="ConfirmDelete()" value="1"
+                            <button type="submit" onclick="ConfirmDelete()"
                                     class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 m-1 rounded shadow-lg">
                                     <i class="bx bx-trash"></i> Hapus
                             </button>

@@ -18,6 +18,8 @@
                     { data: 'date', name: 'date' },
                     { data: 'name', name: 'name' },
                     { data: 'address', name: 'address' },
+                    { data: 'necessity', name: 'necessity' },
+                    { data: 'description', name: 'description' },
                     {
                         data: 'action',
                         name: 'action',
@@ -55,6 +57,8 @@
                                 <th>Tanggal</th>
                                 <th>Nama</th>
                                 <th>Alamat</th>
+                                <th>Keperluan</th>
+                                <th>Keterangan</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>

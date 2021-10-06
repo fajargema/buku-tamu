@@ -27,12 +27,7 @@
 
                 <form action=" {{ route('dashboard.guest.store') }}" class="w-full" method="post" enctype="multipart/form-data">
                     @csrf
-                    <div class="flex flex-wrap -mx-3 mb-6">
-                        <div class="w-full px-3">
-                            <label for="name" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Date</label>
-                            <input type="date" name="date" class="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                        </div>
-                    </div>
+                    <input type="hidden" name="date" value="{{\Carbon\Carbon::now()->format('Y-m-d')}}">
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3">
                             <label for="name" class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Name</label>
@@ -70,5 +65,4 @@
         </div>
     </div>
 
-    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
 </x-app-layout>
